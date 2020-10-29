@@ -11,6 +11,7 @@ authors = ["Liu Xiaodong <liuxd2018@foxmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 click = "^7.1.2"
+requests = "^2.24.0"
 
 [tool.poetry.dev-dependencies]
 

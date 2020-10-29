@@ -86,3 +86,6 @@ poetry install
 # run
 poetry run modern-python
 ```
+
+添加 `requests`
+
