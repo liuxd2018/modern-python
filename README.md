@@ -68,3 +68,21 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
     ```bash
     poetry add click
     ```
+
+## initial code
+
+在 `src/modern_python` 中创建 `console.py`
+
+在 `project.toml` 中
+
+```toml
+[tool.poetry.scripts]
+modern-python = "modern_python.console:main"
+```
+
+```bash
+# install
+poetry install
+# run
+poetry run modern-python
+```
