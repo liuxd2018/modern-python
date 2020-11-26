@@ -1,12 +1,15 @@
 import tempfile
+from typing import Any
+
 
 import nox
+from nox.sessions import Session
 
 # default runned session with `nox` command
 nox.options.sessions = "tests", "lint", "safety", "mypy"
 
 
-def install_with_constraints(session, *args, **kwargs):
+def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
     with tempfile.NamedTemporaryFile() as requirements:
         session.run(
             "poetry",
@@ -21,7 +24,7 @@ def install_with_constraints(session, *args, **kwargs):
 
 
 @nox.session(python="3.9")
-def tests(session):
+def tests(session: Session) -> None:
     args = session.posargs or ["--cov", "-m", "not e2e"]
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(
@@ -34,7 +37,7 @@ locations = "src", "tests", "noxfile.py"
 
 
 @nox.session(python="3.9")
-def lint(session):
+def lint(session: Session) -> None:
     args = session.posargs or locations
     install_with_constraints(
         session,
@@ -43,12 +46,13 @@ def lint(session):
         "flake8-import-order",
         "flake8-bugbear",
         "flake8-bandit",
+        "flake8-annotations",
     )
     session.run("flake8", *args)
 
 
 @nox.session(python="3.9")
-def safety(session):
+def safety(session: Session) -> None:
     with tempfile.NamedTemporaryFile() as requirements:
         session.run(
             "poetry",
@@ -64,14 +68,14 @@ def safety(session):
 
 
 @nox.session(python="3.9")
-def mypy(session):
+def mypy(session: Session) -> None:
     args = session.posargs or locations
     install_with_constraints(session, "mypy")
     session.run("mypy", *args)
 
 
 @nox.session(python="3.9")
-def black(session):
+def black(session: Session) -> None:
     args = session.posargs or locations
     install_with_constraints(session, "black")
     session.run("black", *args)
@@ -81,7 +85,7 @@ package = "modern_python"
 
 
 @nox.session(python="3.9")
-def typeguard(session):
+def typeguard(session: Session) -> None:
     args = session.posargs or ["-m", "not e2e"]
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
