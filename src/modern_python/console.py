@@ -1,7 +1,6 @@
-import click
-
-
 import textwrap
+
+import click
 
 from . import __version__, wikipedia
 
@@ -18,7 +17,7 @@ from . import __version__, wikipedia
 @click.version_option(version=__version__)
 def main(language):
     """现代化python工程"""
-    
+
     data = wikipedia.random_page(language=language)
 
     title = data["title"]
@@ -26,4 +25,3 @@ def main(language):
 
     click.secho(title, fg="green")
     click.echo(textwrap.fill(extract))
-

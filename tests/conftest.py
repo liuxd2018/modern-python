@@ -1,8 +1,10 @@
 import pytest
 
+
 # register e2e marker using the pytest_configure hook
 def pytest_configure(config):
     config.addinivalue_line("markers", "e2e: mark as end-to-end test.")
+
 
 # this fixture in all the module under same directory
 @pytest.fixture
