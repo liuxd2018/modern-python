@@ -1,8 +1,11 @@
+"""Command-line interface."""
+
 import textwrap
 
 import click
 
-from . import __version__, wikipedia
+from . import __version__
+from . import wikipedia
 
 
 @click.command()
@@ -16,8 +19,7 @@ from . import __version__, wikipedia
 )
 @click.version_option(version=__version__)
 def main(language: str) -> None:
-    """现代化python工程"""
-
+    """现代化python工程."""
     page = wikipedia.random_page(language=language)
 
     click.secho(page.title, fg="green")
