@@ -3,7 +3,7 @@ import tempfile
 import nox
 
 # default runned session with `nox` command
-nox.options.sessions = "lint", "tests", "safety", "mypy"
+nox.options.sessions = "tests", "lint", "safety", "mypy"
 
 
 def install_with_constraints(session, *args, **kwargs):
@@ -48,13 +48,6 @@ def lint(session):
 
 
 @nox.session(python="3.9")
-def black(session):
-    args = session.posargs or locations
-    install_with_constraints(session, "black")
-    session.run("black", *args)
-
-
-@nox.session(python="3.9")
 def safety(session):
     with tempfile.NamedTemporaryFile() as requirements:
         session.run(
@@ -75,3 +68,21 @@ def mypy(session):
     args = session.posargs or locations
     install_with_constraints(session, "mypy")
     session.run("mypy", *args)
+
+
+@nox.session(python="3.9")
+def black(session):
+    args = session.posargs or locations
+    install_with_constraints(session, "black")
+    session.run("black", *args)
+
+
+package = "modern_python"
+
+
+@nox.session(python="3.9")
+def typeguard(session):
+    args = session.posargs or ["-m", "not e2e"]
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
+    session.run("pytest", f"--typeguard-packages={package}", *args)
