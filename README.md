@@ -1,5 +1,5 @@
 [![Tests](https://github.com/liuxd2018/modern-python/workflows/Tests/badge.svg)](https://github.com/liuxd2018/modern-python/actions?workflow=Tests)
-
+[![codecov](https://codecov.io/gh/liuxd2018/modern-python/branch/main/graph/badge.svg?token=D0H556ME01)](https://codecov.io/gh/liuxd2018/modern-python)
 # modern python project
 
 ## create a repository in github
