@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "modern-python"
-version = "0.3.0"
+version = "0.3.1"
 license = "MIT"
 readme = "README.md"
 description = "现代化的python项目模版"
