@@ -1,3 +1,5 @@
+[![Tests](https://github.com/liuxd2018/modern-python/workflows/Tests/badge.svg)](https://github.com/liuxd2018/modern-python/actions?workflow=Tests)
+
 # modern python project
 
 ## create a repository in github
