@@ -1,4 +1,4 @@
-The Hypermodern Python Project
+The Modern Python Project
 ==============================
 
 .. toctree::
@@ -8,9 +8,9 @@ The Hypermodern Python Project
    license
    reference
 
-The example project for the
-`modern python <https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769>`_
-article series.
+The example GitHub Pages doc  for the
+`modern python <https://github.com/liuxd2018/modern-python>`_
+.
 The command-line interface prints random facts to your console,
 using the `Wikipedia API <https://en.wikipedia.org/api/rest_v1/#/>`_.
 
@@ -18,22 +18,22 @@ using the `Wikipedia API <https://en.wikipedia.org/api/rest_v1/#/>`_.
 Installation
 ------------
 
-To install the Hypermodern Python project,
+To install the Modern Python project,
 run this command in your terminal:
 
 .. code-block:: console
 
-   $ pip install hypermodern-python
+   $ pip install modern-python
 
 
 Usage
 -----
 
-Hypermodern Python's usage looks like:
+Modern Python's usage looks like:
 
 .. code-block:: console
 
-   $ hypermodern-python [OPTIONS]
+   $ modern-python [OPTIONS]
 
 .. option:: -l <language>, --language <language>
 
