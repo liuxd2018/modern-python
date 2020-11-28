@@ -6,6 +6,7 @@ readme = "README.md"
 description = "现代化的python项目模版"
 homepage = "https://github.com/liuxd2018/modern-python"
 repository = "https://github.com/liuxd2018/modern-python"
+documentation = "https://liuxd2018.github.io/modern-python/"
 authors = ["Liu Xiaodong <liuxd2018@foxmail.com>"]
 
 [tool.poetry.dependencies]

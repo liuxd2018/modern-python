@@ -4,6 +4,8 @@
 
 # modern python project
 
+[docs](https://liuxd2018.github.io/modern-python/)
+
 ## create a repository in github
 
 * gitignore
