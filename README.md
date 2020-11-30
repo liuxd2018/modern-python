@@ -1,6 +1,7 @@
 [![Tests](https://github.com/liuxd2018/modern-python/workflows/Tests/badge.svg)](https://github.com/liuxd2018/modern-python/actions?workflow=Tests)
 [![codecov](https://codecov.io/gh/liuxd2018/modern-python/branch/main/graph/badge.svg?token=D0H556ME01)](https://codecov.io/gh/liuxd2018/modern-python)
 [![PyPI](https://img.shields.io/pypi/v/modern-python.svg)](https://pypi.org/project/modern-python/)
+[![Read the Docs](https://readthedocs.org/projects/modern-python/badge/)](https://modern-python.readthedocs.io/)
 
 # modern python project
 
