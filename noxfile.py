@@ -46,7 +46,7 @@ def lint(session: Session) -> None:
         session,
         "flake8",
         "flake8-black",
-        "flake8-import-order",
+        "flake8-isort",
         "flake8-bugbear",
         "flake8-bandit",
         "flake8-annotations",
@@ -79,6 +79,14 @@ def mypy(session: Session) -> None:
     args = session.posargs or locations
     install_with_constraints(session, "mypy")
     session.run("mypy", *args)
+
+
+@nox.session(python="3.9")
+def isort(session: Session) -> None:
+    """Run isort import fixer."""
+    args = session.posargs or locations
+    install_with_constraints(session, "isort")
+    session.run("isort", *args)
 
 
 @nox.session(python="3.9")

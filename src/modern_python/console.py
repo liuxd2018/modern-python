@@ -4,8 +4,7 @@ import textwrap
 
 import click
 
-from . import __version__
-from . import wikipedia
+from . import __version__, wikipedia
 
 
 @click.command()

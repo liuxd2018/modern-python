@@ -2,10 +2,10 @@
 from unittest.mock import Mock
 
 import click.testing
-from click.testing import CliRunner
 import pytest
-from pytest_mock import MockFixture
 import requests
+from click.testing import CliRunner
+from pytest_mock import MockFixture
 
 from modern_python import console
 
