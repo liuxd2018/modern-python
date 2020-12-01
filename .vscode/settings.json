@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/apple/Library/Caches/pypoetry/virtualenvs/modern-python-rn8Gid70-py3.9/bin/python",
+    "python.pythonPath": "/Users/apple/Library/Caches/pypoetry/virtualenvs/modern-python-rn8Gid70-py3.9/",
     "python.testing.pytestArgs": [
         "tests"
     ],
